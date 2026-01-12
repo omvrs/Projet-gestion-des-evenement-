@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Connexion - Gestion CAN 2025 Maroc</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="header">
+                    <img 
+                        src="https://www.nicepng.com/png/detail/291-2914458_morocco-soccer-logo-morocco-national-football-team-logo.png" 
+                        alt="FRMF" 
+                        class="frmf-logo"
+                    />
+                    <h1>Connexion</h1>
+                    <p class="subtitle">Gestion des événements - CAN 2025 Maroc</p>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            placeholder="Entrez votre nom d'utilisateur" 
+                            required 
+                            autocomplete="username"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="••••••••" 
+                            required 
+                            autocomplete="current-password"
+                        />
+                    </div>
+
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox" id="remember" />
+                            <span>Se souvenir de moi</span>
+                        </label>
+                        <a href="#" class="forgot">Mot de passe oublié ?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        Se connecter
+                    </button>
+                </form>
+
+                <div class="footer">
+                    <p>© 2025 Fédération Royale Marocaine de Football</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

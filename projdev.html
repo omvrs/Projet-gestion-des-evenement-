@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gestion des Événements - CAN 2025 Maroc</title>
+    <link rel="stylesheet" href="projdev.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img 
+                    src="https://www.nicepng.com/png/detail/291-2914458_morocco-soccer-logo-morocco-national-football-team-logo.png" 
+                    alt="Logo Fédération Royale Marocaine de Football (FRMF)" 
+                    class="frmf-logo"
+                />
+            </div>
+            <div class="title-group">
+                <h1>Gestion Événements CAN 2025</h1>
+                <p class="subtitle">Maroc – Terre de Football</p>
+            </div>
+        </header>
+
+        <!-- Formulaire d'ajout / modification -->
+        <section class="form-section">
+            <form id="eventForm" class="event-form">
+                <input type="hidden" id="eventId" value="">
+
+                <div class="form-group">
+                    <label for="title">Titre de l'événement</label>
+                    <input type="text" id="title" placeholder="Ex: Demi-finale Maroc - Sénégal" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Stade / Lieu</label>
+                    <input type="text" id="location" placeholder="Ex: Complexe Sportif Prince Moulay Abdellah" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description / Détails</label>
+                    <textarea id="description" rows="4" placeholder="Phase du tournoi, équipes, horaire..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Enregistrer l'événement
+                </button>
+            </form>
+        </section>
+
+        <!-- Liste des événements -->
+        <section class="table-section">
+            <h2>Programme des événements enregistrés</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Date</th>
+                            <th>Stade / Lieu</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    
+
+    <script src="projdev.js"></script>
+</body>
+<!-- Menu latéral simple -->
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2>Gestion CAN 2025</h2>
+        <button type="button" class="sidebar-close" id="closeSidebar">×</button>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a href="#top" class="sidebar-link active">Tableau de bord</a>
+        <a href="#eventForm" class="sidebar-link">Nouvel événement</a>
+        <a href="login.html" class="sidebar-link">Déconnexion</a>
+    </nav>
+</aside>
+
+<!-- Bouton d'ouverture (toujours visible) -->
+<button type="button" class="sidebar-toggle" id="openSidebar">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+</button>
+
+<!-- Overlay (pour fermer en cliquant à côté sur mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</html>
